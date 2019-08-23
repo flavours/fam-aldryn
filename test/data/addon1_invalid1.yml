@@ -1,0 +1,6 @@
+meta: 
+  name: addons/aldryn-redirects
+  version: 1.2.0
+version: 0.1
+install:
+  addonname: aldryn-redirects
