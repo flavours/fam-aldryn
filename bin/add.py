@@ -18,11 +18,11 @@ import requests
 
 # Add the ptdraft folder path to the sys.path list
 sys.path.append("/usr/lib/")
-from fam_diviocloud_addon import constants, utils  # isort:skip
+from fam_aldryn import constants, utils  # isort:skip
 
 
 def log(string):
-    click.echo(f"fam-diviocloud-addon: {string}")
+    click.echo(f"fam-aldryn: {string}")
 
 
 def update_requirements_in(addon_name):

@@ -10,7 +10,7 @@ from strictyaml import load
 
 
 def log(string):
-    click.echo(f"fam-diviocloud-addon: {string}")
+    click.echo(f"fam-aldryn: {string}")
 
 
 def check_structure(yaml):
@@ -20,7 +20,7 @@ def check_structure(yaml):
 def check_policies(yaml):
 
     process = subprocess.Popen(
-        ["conftest", "test", "-p=/flavour/fam-diviocloud-addon/policy", "-"],
+        ["conftest", "test", "-p=/flavour/fam-aldryn/policy", "-"],
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
     )

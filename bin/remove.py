@@ -7,7 +7,7 @@ import sys
 import click
 
 import libflavour
-from fam_diviocloud_addon import constants, utils
+from fam_aldryn import constants, utils
 from strictyaml import load
 
 
@@ -16,7 +16,7 @@ sys.path.append("/usr/lib/")
 
 
 def log(string):
-    click.echo(f"fam-diviocloud-addon: {string}")
+    click.echo(f"fam-aldryn: {string}")
 
 
 def update_requirements_in(addon_name):
