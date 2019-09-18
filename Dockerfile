@@ -1,7 +1,7 @@
 FROM flavour/fam-flavour:0.1
 
 # Version of the addon manager
-ARG VERSION=0.1
+ARG VERSION=0.1.1
 
 ENV FAM_IDENTIFIER flavour/fam-aldryn:$VERSION
 

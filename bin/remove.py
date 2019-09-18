@@ -7,12 +7,13 @@ import sys
 import click
 
 import libflavour
-from fam_aldryn import constants, utils
 from strictyaml import load
+
 
 
 # Add the ptdraft folder path to the sys.path list
 sys.path.append("/usr/lib/")
+from fam_aldryn import constants, utils  # isort:skip
 
 
 def log(string):
