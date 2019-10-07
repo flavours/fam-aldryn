@@ -13,13 +13,6 @@ RUN pip install -r /flavour/fam-aldryn/requirements.txt
 
 WORKDIR /app 
 
-# move fam-flavour binaries to a save place
-RUN mkdir /bin/fam-flavour
-RUN mv /bin/add /bin/fam-flavour/add
-RUN mv /bin/remove /bin/fam-flavour/remove
-RUN mv /bin/check /bin/fam-flavour/check
-
-
 # This needs a better way...
 RUN mkdir /usr/lib/fam_aldryn
 COPY lib/*.py /usr/lib/fam_aldryn/
@@ -31,6 +24,10 @@ COPY policy/*.rego /flavour/fam-aldryn/policy/
 
 
 # copy the new stuff
-COPY bin/add.py /bin/add
-COPY bin/remove.py /bin/remove
-COPY bin/check.py /bin/check
+COPY bin/add.py /bin/fam-aldryn/add
+COPY bin/remove.py /bin/fam-aldryn/remove
+COPY bin/check.py /bin/fam-aldryn/check
+
+RUN rm /bin/add && ln -s /bin/fam-aldryn/add /bin/add
+RUN rm /bin/check && ln -s /bin/fam-aldryn/check /bin/check
+RUN rm /bin/remove && ln -s /bin/fam-aldryn/remove /bin/remove
