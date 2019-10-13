@@ -18,7 +18,7 @@ RUN mkdir /usr/lib/fam_aldryn
 COPY lib/*.py /usr/lib/fam_aldryn/
 
 # copy policies
-RUN mkdir -p /flavour/fam-divicloud-addon/policy
+RUN mkdir -p /flavour/fam-aldryn/policy
 COPY policy/*.rego /flavour/fam-aldryn/policy/
 
 
