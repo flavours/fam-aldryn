@@ -7,8 +7,6 @@ import sys
 import click
 
 import libflavour
-from strictyaml import load
-
 
 
 # Add the ptdraft folder path to the sys.path list
@@ -67,7 +65,7 @@ def remove():
         sys.exit(process.returncode)
     process.stdin.close()
 
-    yaml_data = load(yaml, libflavour.schema.schema_addon)
+    yaml_data = libflavour.Addon(yaml)._data
     log(f"removing: {yaml_data['meta']['name']}")
 
     log("Updating requirements.in")

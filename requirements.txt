@@ -1,4 +1,4 @@
 requests
-libflavour==0.0.12
+libflavour==0.0.19
 strictyaml
 python-slugify
